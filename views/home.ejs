@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>homepage</title>
+  </head>
+  <body>
+    <a href="/comments/new"><button>create new comment</button></a>
+
+    <% for( let data of appdata) { %>
+    <div>
+        <img src="<%= 10 %> " alt="" srcset="">
+        <h1><%= data.name %> </h1>
+        <p><%= data.tweet %> </p>
+        <h4><%= data.followers %> </h4>
+        <a href=""><button>details</button></a>
+        <hr>
+    </div>
+    <% } %>
+ 
+  </body>
+</html>

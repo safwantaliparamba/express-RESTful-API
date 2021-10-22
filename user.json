@@ -1,0 +1,37 @@
+ [
+   {
+        "name" : "Safwan taliparamba",
+        "followers":21903,
+        "tweet":"Lorem ipsum dolor sit amet consectetur adipisicing elit"
+    },
+    {
+        "name" : "jubair",
+        "followers":123378,
+        "tweet":"Lorem ipsum dolor sit amet consectetur adipisicing elit"
+
+    },
+    {
+        "name" : "hiyas siddique",
+        "followers":643762,
+        "tweet":"Lorem ipsum dolor sit amet consectetur adipisicing elit"
+
+    },
+    {
+        "name" : "aswathi achu",
+        "followers":63738,
+        "tweet":"Lorem ipsum dolor sit amet consectetur adipisicing elit"
+
+    },
+    {
+        "name" : "Jeff bezos",
+        "followers":327989,
+        "tweet":"Lorem ipsum dolor sit amet consectetur adipisicing elit"
+
+    },
+    {
+        "name" : "Elon musk",
+        "followers":457362,
+        "tweet":"Lorem ipsum dolor sit amet consectetur adipisicing elit"
+
+    }
+]
