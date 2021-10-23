@@ -2,9 +2,11 @@ const express = require('express')
 const path = require('path')
 const app = express()
 const { v4: uuid } = require('uuid');
+var methodOverride = require('method-override')
 
 app.use(express.urlencoded({extended : true}))
 app.use(express.json())
+app.use(methodOverride('_method'))
 
 const appdata = [
     {
@@ -73,6 +75,17 @@ app.get('/comments/:id' , (req, res) => {
     const id = req.params.id
     const cid = appdata.find(c => c.id == id)
     res.render('details' , {cid})
+})
+app.get('/comments/:id/edit' , (req, res) => {
+    const id = req.params.id
+    const cid = appdata.find(c => c.id == id)
+    res.render('edit' , {cid})
+})
+app.patch('/comments/:id' , (req, res)=>{
+    const id = req.params.id
+    const cid = appdata.find(c => c.id == id)
+    cid.tweet = req.body.tweet
+    res.redirect('/comments')
 })
 
 
