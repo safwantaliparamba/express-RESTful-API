@@ -14,6 +14,9 @@
           <h4><%= cid.followers %></h4> </h4>
           <a href="/comments"><button>view all comments</button></a> </button></a>
           <a href="/comments/<%= cid.id %>/edit"><button>edit</button></a>
+          <form action="/comments/<%= cid.id %>?_method=delete" method="post">
+              <button>delete</button>
+          </form>
       </div>
 </body>
 </html>

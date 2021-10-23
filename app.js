@@ -8,7 +8,7 @@ app.use(express.urlencoded({extended : true}))
 app.use(express.json())
 app.use(methodOverride('_method'))
 
-const appdata = [
+let appdata = [
     {
         "id": uuid(),
         "name" : "Safwan taliparamba",
@@ -85,6 +85,11 @@ app.patch('/comments/:id' , (req, res)=>{
     const id = req.params.id
     const cid = appdata.find(c => c.id == id)
     cid.tweet = req.body.tweet
+    res.redirect('/comments')
+})
+app.delete('/comments/:id' , (req, res) => {
+    const id = req.params.id
+    appdata = appdata.filter(c => c.id != id)
     res.redirect('/comments')
 })
 
